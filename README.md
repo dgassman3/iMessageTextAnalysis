@@ -1,5 +1,5 @@
 # iMessageTextAnalysis
-To get different statistics about iMessage conversations
+##To get different statistics about iMessage conversations
 
 This is a little project I worked on for my girlfriend to analyze our text conversation over six months.
 The end result was some graphs detailing our most frequent words (combined, by person), most frequently texted times, etc.

@@ -40,3 +40,4 @@ for words in sorted(frequency_list):
   #change the frequency depending on how long your conversation may be and how many words you want analyzed
     if frequency[words] > 3 and words not in excludedwords:
         print words, frequency[words]
+##end

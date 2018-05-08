@@ -1,7 +1,7 @@
 select 
---select fields
 m.text, 
 datetime(substr(m.date, 1, 9) + 978307200, 'unixepoch', 'localtime') as message_date,
+-- below fields were tailored to how I wanted to construe things, obviously some fields may be superfluous, but gives a variety of date markers
 (select case strftime('%m', datetime(substr(m.date, 1, 9) + 978307200, 'unixepoch', 'localtime')) when '01' then 'January' when '02' then 'February'
 when '03' then 'March' when '04' then 'April' when '05' then 'May' when '06' then 'June' when '07' then 'July' when '08' then 'August'
 when '09' then 'September' when '10' then 'October' when '11' then 'November' when '12' then 'December' end) as month,
@@ -16,4 +16,4 @@ h.id
 from message m 
 inner join handle h on m.handle_id = h.ROWID
 --where clause
-where h.id = '+15618099059'
+where h.id = 'string form of the number for the contact you want to analyze'

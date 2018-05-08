@@ -17,4 +17,3 @@ from message m
 inner join handle h on m.handle_id = h.ROWID
 --where clause
 where h.id = 'string form of the number for the contact you want to analyze'
---

@@ -5,6 +5,7 @@ document_text = open('your_file_name', 'r')
 text_string = document_text.read().lower()
 match_pattern = re.findall(r'\b[a-z]{3,15}\b', text_string)
 #below list can be edited
+#these are the words I didn't want to be counted, due to common use
 excludedwords = ['about', 'actually', 'after', 'again', 'all', 'already', 'also', 'always', 'and',
                  'any', 'anything', 'are', 'around', 'away', 'back', 'bad', 'because', 'been',
                  'before', 'being', 'better', 'bit', 'but', 'can', 'cause', 'check', 'close', 'could',
@@ -36,5 +37,6 @@ for word in match_pattern:
 frequency_list = frequency.keys()
  
 for words in sorted(frequency_list):
-    if frequency[words] > 3 and words not in excludedwords and words in ClaudiaAdjectives:
+  #change the frequency depending on how long your conversation may be and how many words you want analyzed
+    if frequency[words] > 3 and words not in excludedwords:
         print words, frequency[words]
